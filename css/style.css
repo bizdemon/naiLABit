@@ -1,0 +1,132 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ body {
+  font-family: 'Open Sans', sans-serif;
+ }
+
+nav ul a,
+nav .brand-logo {
+  /*color: #e91e63;/*#ef5350;*/
+  font-family: 'Comfortaa', cursive;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #e91e63;
+}
+
+nav .nav-wrapper {
+    padding: 0 50px;
+}
+
+.parallax-container {
+  min-height: 450px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.section-intro{
+  height: 100%;
+  width: 100%;
+}
+
+.section-registration{
+  height: 100%;
+  width: 100%;
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+
+  nav .nav-wrapper {
+    padding: 0 10px;
+  }
+}
+
+#service h5{
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+.col-service{
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.icon-registration{
+  font-size: 7em;
+  margin-top: 60px;
+}
+
+.sub-registration{
+  line-height: 2em;
+}
+
+.btn-registration{
+  width: 100%;
+}
+
+.icon-join{
+  font-size: 7em;
+  margin-top: 60px;
+}
+
+.sub-join{
+  line-height: 2em;
+}
+
+.btn-join{
+  width: 100%;
+}
+
+.icons-footer{
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.icons-footer:hover{
+  color: #000;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+  color: #e91e63;/*#ef5350;*/
+}
+
+.icon-block .light {
+  color: #e91e63;
+}
+
+footer.page-footer {
+  margin: 0;
+}
