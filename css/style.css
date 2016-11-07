@@ -54,14 +54,18 @@ nav .nav-wrapper {
     position: absolute;
     top: 40%;
   }
-  #index-banner .section {
+  #index-banner .section-intro {
     top: 10%;
   }
 }
 
 @media only screen and (max-width : 600px) {
-  #index-banner .section {
+  #index-banner .section-intro {
     top: 0;
+  }
+
+  #index-banner .section-intro h1{
+    font-size: 3.2em;;
   }
 
   nav .nav-wrapper {
