@@ -61,7 +61,7 @@ let en_html =
     "srv_bup" : "Saving money do not always mean compromising quality",
     "srv_bdw" : "We carefully select the best materials at the most competitive prices",
     "srv_cup" : "Enjoy an high quality professional services",
-    "srv_cdw" : "Experience our nails salons driven by sepcialists always up to date",
+    "srv_cdw" : "Experience our nails salons driven by specialists always up to date",
 
     "sign_h3" : "How to book your next nail treatment?",
     "sign_h5" : "Sign-in and stay tuned about the upconming release of naiLABit app",
@@ -85,42 +85,42 @@ let en_placeholders =
 let ru_html = 
 {
     "nav_logo" : "naiLAB Италия",
-    "nav_service" : "Servizio",
-    "nav_signup" : "Registrati",
-    "nav_join" : "Unisciti a noi",
+    "nav_service" : "Сервис",
+    "nav_signup" : "Зарегистрироваться",
+    "nav_join" : "Присоединяйтесь к нам",
     
-    "nav_m_service" : "Servizio",
-    "nav_m_signup" : "Registrati",
-    "nav_m_join" : "Unisciti a noi",
+    "nav_m_service" : "Сервис",
+    "nav_m_signup" : "Зарегистрироваться",
+    "nav_m_join" : "Присоединяйтесь к нам",
     
-    "intro_h1" : "La tua bellezza. Senza compromessi.",
-    "intro_h5" : "Prenditi cura delle tue unghie nei migliori saloni di bellezza come e quando vuoi tu.",
-    "intro_btn" : "Scopri come funziona",
+    "intro_h1" : "Ваша красота без компромиссов.",
+    "intro_h5" : "Позаботьтесь о ваших ногтях в лучших салонах красоты, как и когда вы хотите.",
+    "intro_btn" : "Узнайте, как это работает",
 
-    "srv_aup" : "Prenditi cura delle tue unghie nei tuoi momenti di pausa",
-    "srv_adw" : "Prenota con un click il tuo trattamento di bellezza sotto casa o vicino all'ufficio",
-    "srv_bup" : "Risparmiare non significa scendere a compromessi",
-    "srv_bdw" : "Selezioniamo per te i migliori materiali ai prezzi più concorrenziali",
-    "srv_cup" : "Goditi un trattamento professionale e di alta qualità",
-    "srv_cdw" : "Affidati a veri saloni di bellezza con specialisti preparati e sempre aggiornati",
+    "srv_aup" : "Позаботьтесь о ваших ногтях в любое удобное для вас время",
+    "srv_adw" : "Запишитесь в один клик,выбрав ближайший салон к вашему дому или офису",
+    "srv_bup" : "Экономить на своей красоте не означает идти на компромиссы",
+    "srv_bdw" : "Мы выбираем для Вас самые лучшие материалы по самым конкурентным ценам",
+    "srv_cup" : "Наслаждайтесь профессиональной и качественной процедурой",
+    "srv_cdw" : "Доверьтесь лучшим салонам красоты с квалифицированным персоналом",
 
-    "sign_h3" : "Vuoi prenotare il tuo prossimo trattamento per le unghie?",
-    "sign_h5" : "Registrati per rimanere aggiornata sul rilascio della versione Beta",
-    "sign_btn" : "Voglio Registrarmi!",
+    "sign_h3" : "Желаете записаться и сделать ваши ручки красивее?",
+    "sign_h5" : "Зарегистрируйтесь, чтобы оставаться в курсе выхода приложения naiLABit",
+    "sign_btn" : "Я хочу зарегистрироваться!",
 
-    "join_h3" : "Vuoi unirti alla nostra rete di saloni di bellezza?",
-    "join_h4" : "Tutto il materiale che serve lo forniamo NOI!!!",
-    "join_h5" : "Compila il questionario indicando la città, l'indirizzo ed il numero di addetti interessati alla formazione.<br>Ti ricontatteremo entro 24h.",
-    "join_btn" : "Voglio partecipare col mio Negozio!",
+    "join_h3" : "Хотите присоединиться к нашей сети салонов красоты?",
+    "join_h4" : "Мы предоставляем Вам весь необходимый материал!",
+    "join_h5" : "Заполните анкету с указанием города, адреса и количество сотрудников, участвующих в процессе обучения. <br> Мы свяжемся с Вами в течение 24 часов.",
+    "join_btn" : "Наш салон хочет присоединиться к naiLAB",
 
-    "ftr_contact" : "Contattaci",
+    "ftr_contact" : "Свяжитесь с нами",
     "ftr_copyright" : "2016 Copyright",
-    "ftr_copylogo" : "naiLAB Italia"
+    "ftr_copylogo" : "naiLAB Италия"
 }
 
 let ru_placeholders = 
 {
-    "mce-EMAIL" : "Inserisci qui la tua email!"
+    "mce-EMAIL" : "Напишите Ваш электронный адрес"
 }
 
 let lang_packs = [
