@@ -444,7 +444,7 @@ if ($) {
   };
 
   $(document).ready(function(){
-    $('.collapsible').collapsible();
+  	$('.collapsible').collapsible();
   });
 }( jQuery ));;(function ($) {
 
@@ -2719,7 +2719,7 @@ $(document).ready(function(){
 ;(function ($) {
   $(document).ready(function() {
 
-    // Function to update labels of text fields
+  	// Function to update labels of text fields
     Materialize.updateTextFields = function() {
       var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
       $(input_selector).each(function(index, element) {
@@ -3721,7 +3721,7 @@ $(document).ready(function(){
 ;(function ($) {
   $(document).ready(function() {
 
-    $(document).on('click.card', '.card', function (e) {
+  	$(document).on('click.card', '.card', function (e) {
       if ($(this).find('> .card-reveal').length) {
         if ($(e.target).is($('.card-reveal .card-title')) || $(e.target).is($('.card-reveal .card-title i'))) {
           // Make Reveal animate down and display none
@@ -4082,7 +4082,7 @@ $(document).ready(function(){
 }( jQuery ));;(function ($) {
   $(document).ready(function() {
 
-    // jQuery reverse
+  	// jQuery reverse
     $.fn.reverse = [].reverse;
 
     // Hover behaviour: make sure this doesn't work on .click-to-toggle FABs!
@@ -7008,7 +7008,7 @@ Picker.extend( 'pickadate', DatePicker )
   }
 
   $(document).ready(function(){
-    $('input, textarea').characterCounter();
+  	$('input, textarea').characterCounter();
   });
 
 }( jQuery ));
@@ -7313,7 +7313,7 @@ Picker.extend( 'pickadate', DatePicker )
           reference = xpos(e);
           referenceY = ypos(e);
 
-          velocity = amplitude = 0;
+          velocity = amplitude = 0;e4
           frame = offset;
           timestamp = Date.now();
           clearInterval(ticker);

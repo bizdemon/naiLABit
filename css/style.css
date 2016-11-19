@@ -6,7 +6,7 @@
  * Made By MaterializeCSS.com
  */
 
- body {
+body {
   font-family: 'Open Sans', sans-serif;
  }
 
@@ -26,6 +26,42 @@ p {
 
 nav .nav-wrapper {
     padding: 0 50px;
+    padding-right: 10px;
+    background-color: #fff;
+}
+
+.navbar-fixed img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.navbar-fixed table, tr, td {
+  border: 0px;
+  width: 0px;
+  height: 0px;
+  padding: 0 0;
+ }
+
+ .navbar-fixed a td {
+  text-align: center;
+  min-width: 38px;
+}
+
+.navbar-fixed a {
+  color: #e91e63;
+}
+
+.dropdown-button {
+  font-size: 16px;
+}
+
+.dropdown-button img {
+  padding-bottom: 4px;
+}
+
+.dropdown-content li > a {
+  padding: 16px 16px;
+  color: #e91e63;
 }
 
 .parallax-container {
