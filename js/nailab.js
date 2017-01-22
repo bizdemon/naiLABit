@@ -86,8 +86,8 @@ $(function() {
           $('.has-error',this).removeClass('has-error has-feedback');
           $('.collapse',this).hide();
 
-          // Hook on input fields of text type
-          $("input[type='text']", this).each(function(){
+          // Hook on input fields with 'data-js-validate' attribute
+          $("input[data-js-validate]", this).each(function(){
 
             var input = $(this), rx = rxValidators[input.attr('data-js-validate').toLowerCase()];
             
