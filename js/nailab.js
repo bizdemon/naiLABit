@@ -14,12 +14,23 @@ $(function() {
 //--- Thank you Modal window pop-up on redirection ------------------------------------------------
 
   // Parse the URL paramenters
-  var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v})
-  
-  // Shows the Modal window to thank you for subscribing (redirect from MailerLite)
-  if(params["thankyou"])
-    $('#thankyouModal').modal('show');
+  var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
 
+//--- Thankyou Modal automation -------------------------------------------------------------
+
+  // Shows the Modal window to thank you for subscribing (redirect from MailerLite)
+  if(params["thankyou"] == 'true')
+  {
+    $('#thankyouModal').modal('show').on('hidden.bs.modal', function (e) {
+
+        // Switch the parameter to 'false' when modal closed
+        params['thankyou'] = 'false';
+
+        // This will trigger page reload
+        location.search = $.param(params);
+    });  
+  }
+  
 //--- Join us Modal Form automation -------------------------------------------------------------
 
   // Activate joinModal fields upon source button
