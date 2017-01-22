@@ -1,0 +1,172 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+ }
+
+nav ul a,
+nav .brand-logo {
+  /*color: #e91e63;/*#ef5350;*/
+  font-family: 'Comfortaa', cursive;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #e91e63;
+}
+
+nav .nav-wrapper {
+    padding: 0 50px;
+    padding-right: 10px;
+    background-color: #fff;
+}
+
+.navbar-fixed img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.navbar-fixed table, tr, td {
+  border: 0px;
+  width: 0px;
+  height: 0px;
+  padding: 0 0;
+ }
+
+ .navbar-fixed a td {
+  text-align: center;
+  min-width: 38px;
+}
+
+.navbar-fixed a {
+  color: #e91e63;
+}
+
+.dropdown-button {
+  font-size: 16px;
+}
+
+.dropdown-button img {
+  padding-bottom: 4px;
+}
+
+.dropdown-content li > a {
+  padding: 16px 16px;
+  color: #e91e63;
+}
+
+.parallax-container {
+  min-height: 450px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.section-intro{
+  height: 100%;
+  width: 100%;
+}
+
+.section-registration{
+  height: 100%;
+  width: 100%;
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section-intro {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section-intro {
+    top: 0;
+  }
+
+  #index-banner .section-intro h1{
+    font-size: 3.2em;;
+  }
+
+  nav .nav-wrapper {
+    padding: 0 10px;
+  }
+}
+
+#service h5{
+  font-size: 1.3em;
+  line-height: 1.6em;
+}
+
+.col-service{
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.icon-registration{
+  font-size: 7em;
+  margin-top: 60px;
+}
+
+.sub-registration{
+  line-height: 2em;
+}
+
+.btn-registration{
+  width: 100%;
+}
+
+.icon-join{
+  font-size: 7em;
+  margin-top: 60px;
+}
+
+.sub-join{
+  line-height: 2em;
+}
+
+.btn-join{
+  width: 100%;
+}
+
+.icons-footer{
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.icons-footer:hover{
+  color: #000;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+  color: #e91e63;/*#ef5350;*/
+}
+
+.icon-block .light {
+  color: #e91e63;
+}
+
+footer.page-footer {
+  margin: 0;
+}

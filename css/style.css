@@ -1,172 +1,383 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
 
-body {
+/******* Global styles
+
+Use this file to override Bootstrap files so you can update the core Bootstrap files in the :future
+
+Author: L.Francisco
+
+*/
+
+body{
   font-family: 'Open Sans', sans-serif;
- }
+  padding-bottom: 0;
+}
 
-nav ul a,
-nav .brand-logo {
-  /*color: #e91e63;/*#ef5350;*/
+/* Define basic colors*/
+h1, h2, h3, h4, h5 {
+  color: #a70439;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+nav, .navbar-brand  {
   font-family: 'Comfortaa', cursive;
 }
 
-p {
-  line-height: 2rem;
+.navbar-default .navbar-brand {
+  padding: 5px 10px;
+  color: #a70439;
 }
 
-.button-collapse {
-  color: #e91e63;
-}
-
-nav .nav-wrapper {
-    padding: 0 50px;
-    padding-right: 10px;
-    background-color: #fff;
-}
-
-.navbar-fixed img {
-  width: 30px;
-  vertical-align: middle;
-}
-
-.navbar-fixed table, tr, td {
-  border: 0px;
-  width: 0px;
-  height: 0px;
-  padding: 0 0;
- }
-
- .navbar-fixed a td {
-  text-align: center;
-  min-width: 38px;
-}
-
-.navbar-fixed a {
-  color: #e91e63;
-}
-
-.dropdown-button {
-  font-size: 16px;
-}
-
-.dropdown-button img {
-  padding-bottom: 4px;
-}
-
-.dropdown-content li > a {
-  padding: 16px 16px;
-  color: #e91e63;
-}
-
-.parallax-container {
-  min-height: 450px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-
-.section-intro{
+.navbar-default .navbar-brand > img {
   height: 100%;
-  width: 100%;
 }
 
-.section-registration{
-  height: 100%;
-  width: 100%;
+.navbar-default .navbar-nav>li>a:hover {
+  color: #a70439;
 }
 
-.parallax-container .section {
-    width: 100%;
-}
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section-intro {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section-intro {
-    top: 0;
-  }
-
-  #index-banner .section-intro h1{
-    font-size: 3.2em;;
-  }
-
-  nav .nav-wrapper {
-    padding: 0 10px;
-  }
-}
-
-#service h5{
-  font-size: 1.3em;
-  line-height: 1.6em;
-}
-
-.col-service{
-  margin-top: 60px;
+.header-banner {
+  min-height: 500px;
+  padding-top: 100px; 
   margin-bottom: 100px;
+
+  background-color: #e91e63; /* fallback color if gradients are not supported */
+  background: url(../img/right-top.png) no-repeat right top;
+  background: url(../img/right-top.png) no-repeat right top, -webkit-linear-gradient(-45deg, #e91e63, #880e4f); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background: url(../img/right-top.png) no-repeat right top, -moz-linear-gradient(-45deg, #e91e63, #880e4f); /* For Firefox (3.6 to 15) */
+  background: url(../img/right-top.png) no-repeat right top, -o-linear-gradient(-45deg, #e91e63, #880e4f); /* For old Opera (11.1 to 12.0) */ 
+  background: url(../img/right-top.png) no-repeat right top, linear-gradient(135deg, #e91e63, #880e4f); /* Standard syntax; must be last */
 }
 
-.icon-registration{
-  font-size: 7em;
-  margin-top: 60px;
+.header-content,.header-content h1,.header-content h2, 
+.header-content h3,.header-content h4,.header-content h5 {
+  color: white;
 }
 
-.sub-registration{
-  line-height: 2em;
+/* Add an extra margin on xs devices */
+@media (max-width: 767px) {
+
+  .header-banner {
+    margin-top: 50px;
+  }
 }
 
-.btn-registration{
-  width: 100%;
+.header-drops {
+  margin-top:-100px;
+  padding: 0 0;
 }
 
-.icon-join{
-  font-size: 7em;
-  margin-top: 60px;
+.form-group {
+  margin-bottom: 5px;
+  padding: 2px;
 }
 
-.sub-join{
-  line-height: 2em;
+.has-error {
+  background: #e91e63;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
+  text-align: center;
 }
 
-.btn-join{
-  width: 100%;
+.has-error .control-label {
+  color: white;
 }
 
-.icons-footer{
-  font-size: 1.5em;
+.btn-nailab {
   color: #fff;
-  padding: 0 20px;
+  background: #e91e63;
+  border: 2px solid #a70439;
+/*  
+  height: 40px;
+  padding: 0 10px 0 10px;
+  font-size: 16px;
+  line-height: 24px;
+*/  
+  border-radius: 12px;
+}
+.btn-nailab:hover,
+.btn-nailab:focus,
+.btn-nailab:active {
+  color: #fff;
+  background-color: #a70439;
+  border-color: #e91e63;
 }
 
-.icons-footer:hover{
-  color: #000;
+.btn-city {
+  color: #a70439;
+  background: #fff;
+  border: 2px solid #a70439;
+}
+.btn-city:hover,
+.btn-city:focus {
+  color: #fff;
+  background-color: #e91e63;
+  border-color: #a70439;
+}
+.btn-city:active, .btn-city.active {
+  color: #fff;
+  background-color: #a70439;
+  border-color: #a70439;
 }
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-  color: #e91e63;/*#ef5350;*/
-}
-
-.icon-block .light {
-  color: #e91e63;
+.footer-banner,.footer-banner h1,.footer-banner h2,
+.footer-banner h3,.footer-banner h4,.footer-banner h5 {
+  color: white;
 }
 
 footer.page-footer {
-  margin: 0;
+  padding-top: 10px;
+  background-color: #e91e63;
+  color: white;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .mkt-column {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.marketing 
+.mkt-column img {
+  width: 100px;
+  /*height: auto;*/
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.footer-banner {
+
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+
+  background-color: #e91e63; /* fallback color if gradients are not supported */
+  background: url(../img/left-bottom.png) no-repeat left bottom;
+  background: url(../img/left-bottom.png) no-repeat left bottom, -webkit-linear-gradient(-45deg, #e91e63, #880e4f); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background: url(../img/left-bottom.png) no-repeat left bottom, -moz-linear-gradient(-45deg, #e91e63, #880e4f); /* For Firefox (3.6 to 15) */
+  background: url(../img/left-bottom.png) no-repeat left bottom, -o-linear-gradient(-45deg, #e91e63, #880e4f); /* For old Opera (11.1 to 12.0) */ 
+  background: url(../img/left-bottom.png) no-repeat left bottom, linear-gradient(135deg, #e91e63, #880e4f); /* Standard syntax; must be last */
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 2em;
+  padding: 20px 20px;
+}
+
+.footer-social a:hover {
+  color: #880e4f;
+}
+
+.footer-copyright {
+  /*overflow: hidden;*/
+  height: 50px;
+  line-height: 50px;
+  padding: 10px 0;
+}
+
+/* MODALS
+-------------------------------------------------- */
+
+#languageModal img {
+  width: 40px;
+  margin: 10px 10px;
+}
+
+.modal-header img {
+  height: 80px;
+  /*margin-left: -5px;*/
+}
+
+.modal-social a {
+  color: #a70439;
+  font-size: 2em;
+  padding: 20px 20px;
+}
+
+.modal-social a:hover {
+  color: #880e4f;
+}
+
+.modal-footer {
+  color: #fff;
+  background: #e91e63;
+  background: -webkit-linear-gradient(-45deg, #e91e63, #880e4f);
+  background: -moz-linear-gradient(-45deg, #e91e63, #880e4f); 
+  background: -o-linear-gradient(-45deg, #e91e63, #880e4f);  
+  background: linear-gradient(135deg, #e91e63, #880e4f); 
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit; 
+}
+
+/* ICONS
+-------------------------------------------------- */
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  margin-right: 2px;
+  margin-top: -5px;
+}
+
+.icon.icon-nailab {
+  background-image: url(../img/icon-nailab-invert.png);
+  width: 24px;
+  height: 24px; 
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/* Remove extra padding on xs devices */
+@media (max-width: 767px) {
+
+  .navbar-default .navbar-brand {
+    padding: 5px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+/***** Animate CSS override 
+
+This is to reduce the extension of fading effect from 100% down to 20px
+to get a nicer movement
+
+*/
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+  }
 }

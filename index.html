@@ -1,194 +1,482 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>naiLABit - Unghie perfette</title>
-  <meta name="description" content="Le tue unghie sempre perfette nei migliori saloni di belezza con naiLABit"/>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>naiLABit - Unghie perfette</title>
+    <meta name="description" content="Le tue unghie sempre perfette nei migliori saloni di belezza con naiLABit"/>
+    <meta name="author" content="L.Francisco">
+    <link rel="icon" href="favicon.ico">
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug >
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"-->
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- Animate CSS -->
+    <link href="css/animate.min.css" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
 
-  <!-- sumome -->
-  <script src="//load.sumome.com/" data-sumo-site-id="0b68b11b6c4f15b2393285cfb9ffca7310223c72c4eb14c1c729f542051283c7" async="async"></script>
-</head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" rel="stylesheet">
 
-<body onload="myTranslate( getCookie('locale') )" >
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
 
-	<!-- Language Desktop Dropdown Structure placeolder, check myTranslate() -->
-	<ul id="dropdown1" class="dropdown-content"></ul>
+  <body>
 
-	<!-- Language Mobile Dropdown Structure placeolder -->
-	<ul id="mobile-dropdown1" class="dropdown-content"></ul>
+    <!-- NAVBAR 
+    ================================================== -->
 
-  <!-- Fixed navbar -->
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a id="nav_logo" href="#" class="brand-logo">naiLAB Italia</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a id="nav_service" href="#service">Servizio</a></li>
-          <li><a id="nav_signup" href="#registration">Registrati</a></li>
-          <li><a id="nav_join" href="#join">Unisciti a noi</a></li>
-        	<!-- Dropdown Trigger -->
-	      	<li><a id="dropdown0" class="dropdown-button" href="#!" data-activates="dropdown1"></a>
-        </ul>
-
-        <!-- Mobile side nav -->
-        <ul id="mobile-demo" class="side-nav">
-          <li><a id="nav_m_service" href="#service">Servizio</a></li>
-          <li><a id="nav_m_signup" href="#registration">Registrati</a></li>
-          <li><a id="nav_m_join" href="#join">Unisciti a noi</a></li>
-          <!-- Dropdown Trigger -->
-	      	<li><a id="mobile-dropdown0" class="dropdown-button" href="#" data-activates="mobile-dropdown1"></a></li>
-      	</ul>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Intro -->
-  <div id="index-banner" class="parallax-container">
-    <div class="section-intro no-pad-bot">
+    <div class="navbar-wrapper wow fadeIn" data-wow-duration="1s">
       <div class="container">
-        <h1 id="intro_h1" class="header center pink-text">La tua bellezza. Senza compromessi.</h1>
-        <div class="row center">
-          <h5 id="intro_h5" class="header col s12 light">Prenditi cura delle tue unghie nei migliori saloni di bellezza come e quando vuoi tu.</h5>
-        </div>
-        <div class="row center">
-          <a id="intro_btn" href="#service" class="btn-large waves-effect waves-light pink">Scopri come funziona</a>
-        </div>
+
+        <nav class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="img/logo2.png"/></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#nailService">Servizio</a></li>
+                <li><a href="#nailCareer">Registrati</a></li>
+                <li><a href="#nailNetwork">Unisciti a noi</a></li>
+                <!--li><a href="#" data-toggle="modal" data-target="#languageModal"><i class="fa fa-globe" aria-hidden="true"></i>&rtrif;Italiano</a></li-->
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
-    <div class="parallax"><img src="img/background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
 
-  <!-- Service -->
-  <div class="container">
-    <div id="service" class="section">
-
-      <div class="col-service">
-
-        <!--   Icon Section   -->
+    <!-- Heading banner
+    ================================================== -->
+    <div class="header-banner">
+      <div class="container">
         <div class="row">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center"><i class="material-icons">today</i></h2>
-              <h5 id="srv_aup" class="center">Prenditi cura delle tue unghie nei tuoi momenti di pausa</h5>
-              <br>
-              <h5 id="srv_adw" class="light center">Prenota con un click il tuo trattamento di bellezza sotto casa o vicino all'ufficio</h5>
-            </div>
+          <div class="hidden-xs col-md-7 header-drops">
+            <img class="wow slideInDown" data-wow-duration="7s" src="img/drop1.png">
+            <img class="wow slideInDown" data-wow-duration="2.7s" src="img/drop2.png">
+            <img class="wow slideInDown" data-wow-duration="5.3s" src="img/drop3.png">
+            <img class="wow slideInDown" data-wow-duration="6.1s" src="img/drop4.png">
+            <img class="wow slideInDown" data-wow-duration="3.6s" src="img/drop5.png">
+            <img class="wow slideInDown" data-wow-duration="5.5s" src="img/drop6.png">
+            <img class="wow slideInDown" data-wow-duration="3s" src="img/drop7.png">
           </div>
+          <div class="col-md-5 header-content">
+            <h1 class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0s">
+              La tua bellezza. Senza compromessi.
+            </h1>
+            <p class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0s">
+              Prenditi cura delle tue unghie coi migliori professionisti di bellezza come e quando vuoi tu.
+            </p>
 
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center"><i class="material-icons">money_off</i></h2>
-              <h5 id="srv_bup" class="center">Risparmiare non significa scendere a compromessi</h5>
-              <br>
-              <h5 id="srv_bdw" class="light center">Selezioniamo per te i migliori materiali ai prezzi più concorrenziali</h5>
-            </div>
-          </div>
+            <!-- Let's the form appearing... -->
+            <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
 
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center"><i class="material-icons">high_quality</i></h2>
-              <h5 id="srv_cup" class="center">Goditi un trattamento professionale e di alta qualità</h5>
-              <br>
-              <h5 id="srv_cdw" class="light center">Affidati a veri saloni di bellezza con specialisti preparati e sempre aggiornati</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              <!-- Begin Mailerlite signup form integration -->
+              <div id="mlb2-3999839">
+                <form id="signup1" action="http://app.mailerlite.com/webforms/submit/a7b4k4" data-id="271953" data-code="a7b4k4" method="POST" target="_blank">
+      
+                    <div id="div1" class="form-group"> <!-- has-error has-feedback" -->
+                      <input id="email1" type="text" name="fields[email]" class="form-control" placeholder="Inserisci qui la tua email!" value="" data-js-validate="email">
+                      <!--span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span-->
+                      <label for="email1" class="control-label collapse">Qualcosa non va con la tua email :(</label>                        
+                    </div>
 
-  <!-- Registration -->
-  <div class="parallax-container valign-wrapper">
-    <div id="registration" class="section-registration no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <i class="material-icons icon-registration">local_hospital</i>
-          <h3 id="sign_h3" class="col s12 light pink-text">Vuoi prenotare il tuo prossimo trattamento per le unghie?</h3>
-          <h5 id="sign_h5" class="col s12 sub-registration">Registrati per rimanere aggiornata sul rilascio della versione Beta</h5>
-          <div class="col s12 m6 offset-m3 input-field inline">
-
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-            <form action="http://nailabit.us14.list-manage.com/subscribe/post?u=bbf4b874835604141b5d1974a&amp;id=d984e6f268" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-              
-              <input type="email" value="" name="EMAIL" class="email validate center white black-text" id="mce-EMAIL" placeholder="Inserisci qui la tua email!" required>
-              <button id="sign_btn" class="btn btn-registration waves-effect waves-light pink" type="submit" name="action">Voglio Registrarmi!</button>
+                    <input type="hidden" name="fields[language]" value="IT">
+                    <input type="hidden" name="fields[source]" value="banner">
+                    <input type="hidden" name="ml-submit" value="1" />
+                    <button type="submit" class="btn btn-lg btn-nailab"><span class="icon icon-nailab"></span>Io ci sto!</button>
+                </form>
               </div>
-            </form>
+            
             </div>
-            <!--End mc_embed_signup-->
           </div>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed img 2"></div>
-  </div>
 
-  <!-- Join -->
-  <div class="container">
-    <div id="join" class="section">
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <div id="nailHowItWorks" class="container marketing">
 
+      <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col s12 center">
-          <i class="material-icons icon-join pink-text">shop_two</i>
-          <h3 id="join_h3" class="col s12 light pink-text">Vuoi unirti alla nostra rete di saloni di bellezza?</h3>
-          <h4 id="join_h4" class="col s12 pink-text">Tutto il materiale che serve lo forniamo NOI!!!</h4>
-          <h5 id="join_h5" class="col s12 sub-join">Compila il questionario indicando la città, l'indirizzo ed il numero di addetti interessati alla formazione.<br>Ti ricontatteremo entro 24h.</h5>
 
-          <!-- Typeform -->
-          <a id="join_btn" class="typeform-share col s12 m6 offset-m3 btn btn-join waves-effect waves-light pink" href="https://nailabit.typeform.com/to/eKG2g6" data-mode="2" target="_blank">Voglio partecipare col mio Negozio!</a>
+        <div class="col-md-4 mkt-column wow fadeInUp" data-wow-duration="2s" data-wow-offset="50">
+          <img class="img-circle" src="img/mkt1.jpg" alt="nail salon image">
+          <h4 class="">Goditi un trattamento professionale e di alta qualità</h4>
+          <br>
+          <p>Affidati ai nostri nailBar, veri saloni di bellezza, guidati da specialisti autorizzati, preparati e sempre aggiornati. Investiamo nelle persone: i professionisti che lavorano con noi seguono un programma di carriera per costruire un futuro assieme</p>
+        </div>
+
+        <div class="col-md-4 mkt-column wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.25s" data-wow-offset="50">
+          <img class="img-circle" src="img/mkt2.jpg" alt="shopping time image">
+          <h4>Prenditi cura delle tue unghie nei tuoi momenti di pausa</h4>
+          <br>
+          <p>Gestisci il tuo tempo senza vincoli. Il nostro servizio è studiato per azzerare i tempi d'attesa senza alcuna prenotazione; ed anche quando prenoti puoi modificare l'appuntamento fino all'ultimo minuto senza perdere i vantaggi acquisiti</p>
+        </div>
+
+        <div class="col-md-4 mkt-column wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s" data-wow-offset="50">
+          <img class="img-circle" src="img/mkt3.jpg" alt="wow girl image">
+          <h4>Risparmiare non significa scendere a compromessi</h4>
+          <br>
+          <p>Selezioniamo per te i migliori materiali ai prezzi più concorrenziali e ti offriamo ulteriori vantaggi quando utilizzi la nostra app per prenotare, comunicare con noi ed aderire alle nostre offerte.<br>Tutto questo, nel pieno rispetto della legge</p>
+        </div>
+
+        <!-- Let's the signup form appearing... -->
+        <div class="row wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+
+          <!-- Begin MailerLite signup form integration -->
+          <form class="col-md-4 col-md-offset-4 text-center" action="http://app.mailerlite.com/webforms/submit/a7b4k4" data-id="271953" data-code="a7b4k4" method="POST" target="_blank">
+
+              <div class="form-group"> <!-- has-error has-feedback" -->
+                <input id="email2" type="text" name="fields[email]" class="form-control" placeholder="Inserisci qui la tua email!" value="" data-js-validate="email">
+                <label for="email2" class="control-label collapse">Qualcosa non va con la tua email :(</label>                        
+              </div>
+
+              <input type="hidden" name="fields[language]" value="IT">
+              <input type="hidden" name="fields[source]" value="features">
+              <input type="hidden" name="ml-submit" value="1" />
+              <button type="submit" class="btn btn-lg btn-nailab ">Voglio saperne di più!</button>    
+          </form>
+        </div>
+ 
+      </div><!-- /.row -->
+
+      <!-- START THE FEATURETTES -->
+      <hr id="nailService" class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading wow fadeInLeft" data-wow-duration="1.75s" data-wow-offset="50">
+            Regalati un trattamento professionale. <span class="text-muted">Un nostro nail bar è dietro l'angolo</span>
+          </h2>
+          <p class="lead wow fadeInRight" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+            Conosci la formula del nail bar? Sono saloni per la cura delle unghie collocati negli spazi comuni dei principali centri commerciali di tutta Italia.
+            Forma e struttura ricordano quelle dei bar e permettono di godere del trattamento in modo pratico e veloce.
+          </p>
+          <h2 class="wow fadeInLeft" data-wow-duration="1.75s" data-wow-offset="50">
+             Vuoi sapere dove siamo?
+           </h2>
+           <p class="lead wow fadeInRight" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+             Iscriviti alla nostra mailing list e ti terremo aggiornata sulle prossime aperture! 
+           </p>
+
+           <!-- Let's the signup form appearing... -->
+          <div class="row wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+
+          <!-- Begin MailerLite signup form integration -->
+          <form class="col-md-7 col-md-offset-1" action="http://app.mailerlite.com/webforms/submit/a7b4k4" data-id="271953" data-code="a7b4k4" method="POST" target="_blank">
+
+              <div class="form-group"> <!-- has-error has-feedback" -->
+                <input id="email3" type="text" name="fields[email]" class="form-control" placeholder="Inserisci qui la tua email!" value="" data-js-validate="email">
+                <label for="email3" class="control-label collapse">Qualcosa non va con la tua email :(</label>                        
+              </div>
+
+              <input type="hidden" name="fields[language]" value="IT">
+              <input type="hidden" name="fields[source]" value="service">
+              <input type="hidden" name="ml-submit" value="1" />
+              <button type="submit" class="btn btn-nailab ">Voglio iscrivermi!</button>    
+          </form>
+          </div>
+
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block wow fadeInUp" data-wow-duration="2s" data-wow-offset="100" src="img/nails.jpg" alt="Service image">
         </div>
       </div>
 
-    </div>
-  </div>
+      <hr id="nailApp" class="featurette-divider">
 
-  <footer class="page-footer pink">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 center">
-          <h5 id="ftr_contact" class="white-text">Contattaci</h5>
-          <a href="mailto:info@nailabit.com" class="icons-footer"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-          <a href="http://facebook.com" target="_blank" class="icons-footer"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="http://instagram.com" target="_blank" class="icons-footer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading wow fadeInRight" data-wow-duration="1.75s" data-wow-offset="50">
+            Goditi il tuo tempo libero. <span class="text-muted">Approfitta del nostro servizio espresso.</span>
+          </h2>
+          <p class="lead wow fadeInLeft" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+            Hai mai dovuto prenotare il tuo trattamento con giorni d'anticipo? Il nostro servizio è studiato per lasciarti la piena libertà di come e quanto prenderti cura delle tue unghie. 
+            Nessuna attesa, nessuna prenotazione obbligatoria. Giusto il tempo di una breve pausa rilassante durante lo shopping.
+          </p>
+          <h2 class="wow fadeInRight" data-wow-duration="1.75s" data-wow-offset="50">
+             E se volessi prenotare?
+          </h2>
+          <p class="lead wow fadeInLeft" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+             Ancora meglio! Se scegli la prenotazione espressa ti riserviamo ulteriori vantaggi pur mantenendo la massima flessibilità. Scarica la nostra app e scopri le nostre promozioni.
+          </p>
+
+           <!-- Let's the signup form appearing... -->
+          <div class="row wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+
+          <!-- Begin MailerLite signup form integration -->
+          <form class="col-md-7 col-md-offset-1" action="http://app.mailerlite.com/webforms/submit/a7b4k4" data-id="271953" data-code="a7b4k4" method="POST" target="_blank">
+
+              <div class="form-group"> <!-- has-error has-feedback" -->
+                <input id="email4" type="text" name="fields[email]" class="form-control" placeholder="Inserisci qui la tua email!" value="" data-js-validate="email">
+                <label for="email4" class="control-label collapse">Qualcosa non va con la tua email :(</label>                        
+              </div>
+
+              <input type="hidden" name="fields[language]" value="IT">
+              <input type="hidden" name="fields[source]" value="app">
+              <input type="hidden" name="ml-submit" value="1" />
+              <button type="submit" class="btn btn-nailab ">Voglio scaricare l'App!</button>    
+          </form>
+          </div>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block wow fadeInUp" data-wow-duration="2s" data-wow-offset="100" src="img/freetime2.jpg" alt="Shopping image">
+        </div>
+      </div>
+
+      <hr id="nailSaving" class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading wow fadeInLeft" data-wow-duration="1.75s" data-wow-offset="50">
+            Risparmia senza compromessi. <span class="text-muted">Solo i migliori professionisti e materiali.</span>
+          </h2>
+          <p class="lead wow fadeInRight" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+            La nostra filosofia è semplice: selezioniamo per voi i migliori materiali, lavoriamo solo con personale qualificato e curiamo pulizia ed igiene.
+            Come nei migliori ristoranti, più che la quantità, per noi conta la qualità del servizio!  
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block wow fadeInUp" data-wow-duration="2s" data-wow-offset="100" src="img/materials.png" alt="Materials image">
+        </div>
+      </div>
+
+      <hr id="nailCareer" class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading wow fadeInRight" data-wow-duration="1.75s" data-wow-offset="50">
+            Investi nel tuo futuro. <span class="text-muted">Iscriviti al nostro programma di carriera.</span>
+          </h2>
+          <p class="lead wow fadeInLeft" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+            Aspiri a diventare una professionista delle unghie? Sei già in possesso del diploma o sei interessata a conseguirlo?
+            Vuoi avviare una tua attività in proprio? Se scegli di lavorare con noi ti offriamo un programma di carriera per aiutarti a conseguire 
+            i tuoi obiettivi! 
+          </p>
+          <h2 class="wow fadeInRight" data-wow-duration="1.75s" data-wow-offset="50">
+             Diventa una delle nostre manager!
+          </h2>
+          <p class="lead wow fadeInLeft" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+             Le nostre strutture sono dirette dai migliori talenti formati e cresciuti assieme a noi! 
+          </p>
+          <p><a class="btn btn-lg btn-nailab wow fadeIn" data-wow-duration="1s" data-wow-delay="1s" data-wow-offset="50"
+                href="#" data-toggle="modal" data-target="#joinModal" data-modal-arg="career">Voglio lavorare con voi!</a></p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block wow fadeInUp" data-wow-duration="2s" data-wow-offset="100" src="img/career.png" alt="Career image">
+        </div>
+      </div>
+
+      <hr id="nailNetwork" class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading wow fadeInLeft" data-wow-duration="1.75s" data-wow-offset="50">
+            Fai crescere la tua attività. <span class="text-muted">Unisciti alla nostra famiglia.</span>
+          </h2>
+          <p class="lead wow fadeInRight" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+            Hai un salone di bellezza? Sei già una  professionista affermata? Ti interessa sviluppare ulteriormente le tue possibilità?
+          </p>
+          <h2 class="wow fadeInLeft" data-wow-duration="1.75s" data-wow-offset="50">
+             Unisciti alla nostra rete!
+          </h2>
+          <p class="lead wow fadeInRight" data-wow-duration="1.75s" data-wow-delay="0.25s" data-wow-offset="50">
+             Ti offriamo supporto materiale e professionale per espandere la tua attività condividendone i risultati alla pari!  
+          </p>
+          <p><a class="btn btn-lg btn-nailab wow fadeIn" data-wow-duration="1s" data-wow-delay="1s" data-wow-offset="50"
+                href="#" data-toggle="modal" data-target="#joinModal" data-modal-arg="salon">Voglio unirmi alla vostra rete!</a></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block wow fadeInUp"  data-wow-duration="2s" data-wow-offset="100" src="img/background2.jpg" alt="Salon image">
+        </div>
+      </div> 
+
+      <hr class="featurette-divider"> 
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+    <!-- FOOTER -->
+    <footer class="footer-banner">
+      <div><h3>Contattaci</h3></div>
+      <div class="footer-social">
+        <a href="mailto:info@nailabit.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="http://facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="http://instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+      <div class="footer-copyright">&copy; 2017 <a href="#">naiLAB Italia</a></div> 
+    </footer>
+
+    <!-- MODAL WINDOWS ================================================== -->
+
+    <!-- Language Selection Modal -->
+    <div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="langLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h5 class="modal-title" id="langLabel"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;Scegli la lingua che preferisci...</h5>
+          </div>
+          <div class="modal-body">
+            <div><a lang="it" href="#"><img src="img/icon_it.png"/>Italiano</a></div>
+            <div><a lang="en-us" href="#"><img src="img/icon_uk.png"/>English</a></div>
+            <div><a lang="ru" href="#"><img src="img/icon_ru.png"/>Pусский</a></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      <a id="ftr_copyright" class="white-text">2016 Copyryght</a><a> </a>
-      <a id="ftr_copylogo" class="brown-text text-lighten-3" href="#">naiLAB Italia</a>
+
+    <!-- Subscription Form Modal -->
+    <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+          <!-- Begin MailerLite signup form integration -->
+          <form action="http://app.mailerlite.com/webforms/submit/w3r2o2" data-id="275387" data-code="w3r2o2" method="POST" target="_blank">
+
+            <div class="modal-header text-center">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <img class="modal-title" src="img/logo2.png"/>
+              <h4 class="modal-title" id="joinLabel">La tua Bellezza. Senza compromessi.</h4>
+              </ul>
+            </div>
+
+            <div class="modal-body"><div class="row"><div class="col-md-10 col-md-offset-1">
+
+              <h5>Compila questa breve questionario e ti ricontatteremo entro 24h</h5>
+
+              <div class="form-group"> <!-- Email -->
+                <input id="email_join" type="text" name="fields[email]" class="form-control" placeholder="Inserisci qui la tua email!" value="" data-js-validate="email">
+                <label for="email_join" class="control-label collapse">Qualcosa non va con la tua email :(</label>                        
+              </div>
+
+              <div class="form-group"> <!-- Name -->
+                <input id="name_join" type="text" name="fields[name]" class="form-control" placeholder="Nome" value="" validate="name">
+                <label for="name_join" class="control-label collapse">Non dimenticare il tuo nome ;)</label>                        
+              </div>
+
+              <div class="form-group"> <!-- Phone -->
+                <input id="phone_join" type="text" name="fields[phone]" class="form-control" placeholder="Telefono, meglio se cellulare" value="" data-js-validate="tel">
+                <label for="phone_join" class="control-label collapse">Il telefono è gradito ;)</label>                        
+              </div>
+
+              <div class="btn-group" data-toggle="buttons"> <!-- City -->
+                <label class="btn btn-city" value="bologna">
+                  <input type="radio" name="city" autocomplete="off">Bologna</label>
+                <label class="btn btn-city" value="florence">
+                  <input type="radio" name="city" autocomplete="off">Firenze</label>
+                <label class="btn btn-city" value="rome">
+                  <input type="radio" name="city" autocomplete="off">Roma</label>
+                <label class="btn btn-city" value="milan">
+                  <input type="radio" name="city" autocomplete="off">Milano</label>
+                <label class="btn btn-city" value="turin">
+                  <input type="radio" name="city" autocomplete="off">Torino</label>
+                <label class="btn btn-city" value="elsewhere">
+                  <input type="radio" name="city" autocomplete="off">Altrove</label>
+              </div>
+
+              <div class="radio"> <!-- Reason to join -->
+                <label><input type="radio" name="join_reasons" id="radio_career" value="career"> Sono interessata a lavorare con voi e fare carriera</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="join_reasons" id="radio_job" value="temporary"> Sono interessata a lavorare con voi temporaneamente</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="join_reasons" id="radio_salon" value="salon"> Ho un salone e voglio  unirmi al vostro circuito</label>
+              </div>
+
+              <!-- Hidden fields to fillup MailerLite form -->
+              <input type="hidden" name="fields[city]" value="">
+              <input type="hidden" name="fields[reason]" value="">
+              <input type="hidden" name="fields[language]" value="IT">
+              <input type="hidden" name="fields[source]" value="">
+              <input type="hidden" name="ml-submit" value="1" />
+               
+            </div></div></div> <!-- modal-body -->
+
+            <div class="modal-footer">
+              <!--button type="button" class="btn btn-nailab" data-dismiss="modal">Chiudi</button-->
+              <button type="submit" class="btn btn-nailab ">Invia richiesta!</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </footer>
 
+    <!-- Subscription Feedback Modal -->
+    <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="thanksLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <img class="modal-title" src="img/logo2.png"/>
+            <h4 class="modal-title" id="thanksLabel">La tua Bellezza. Senza compromessi.</h4>
+            </ul>
+          </div>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center">
+                <h1>Grazie per esserti iscritta!</h1>
+                <p>La tua sottoscrizione è confermata. Riceverai presto nostre notizie :)</p>
+              </div>
+              <div class="col-md-2">
+                  <ul class="list-unstyled modal-social text-center">
+                  <li><a href="mailto:info@nailabit.com"><i class="fa fa-envelope" aria-hidden="true"></i></a><li>
+                  <li><a href="http://facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><li>
+                  <li><a href="http://instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a><li>
+                  </ul>
+              </div>
+            </div>
+  
+          </div>
 
-  <!-- my locale tools -->
-  <script src="js/locale.js"></script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-nailab" data-dismiss="modal">Chiudi</button>  
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- TypeForm -->
-  <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script-->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Just to make our placeholder images work. Don't actually copy the next line!>
+    <script src="js/holder.min.js"></script -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug >
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script -->
 
+    <!-- Custom nailab automation  -->
+    <script src="js/nailab.js"></script>
+
+    <!-- WOW -->
+    <script src="js/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+
+    <!-- Addthis > 
+    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587fe3bbcb9419de"></script> -->
   </body>
 </html>
+
