@@ -197,7 +197,7 @@ footer.page-footer {
   }
 }
 
-/* Adding a margin on top of featurette image to space it from the text on xs screens*/
+/* Adding a margin on top of featurette image to space it from the text on xs screens */
 .featurette-image {
   margin-top: 20px;
 }
