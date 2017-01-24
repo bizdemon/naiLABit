@@ -142,6 +142,24 @@ nav, .navbar-brand  {
   border-color: #a70439;
 }
 
+.btn-city-group > .btn-city {
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 6px;
+}
+
+/* Reduce city buttons on xs devices */
+@media (max-width: 767px) {
+
+  .btn-city-group > .btn-city {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+  }
+}
+
 .footer-banner,.footer-banner h1,.footer-banner h2,
 .footer-banner h3,.footer-banner h4,.footer-banner h5 {
   color: white;
@@ -170,6 +188,18 @@ footer.page-footer {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+@media (min-width: 768px) {
+
+   .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+/* Adding a margin on top of featurette image to space it from the text on xs screens*/
+.featurette-image {
+  margin-top: 20px;
 }
 
 .featurette-divider {
@@ -218,6 +248,14 @@ footer.page-footer {
 .modal-header img {
   height: 80px;
   /*margin-left: -5px;*/
+}
+
+/* Reduce logo size on xs devices */
+@media (max-width: 767px) {
+
+ .modal-header img {
+    height: 50px;
+  }
 }
 
 .modal-social a {
@@ -297,10 +335,6 @@ footer.page-footer {
     margin-bottom: 20px;
     font-size: 21px;
     line-height: 1.4;
-  }
-
-  .featurette-heading {
-    font-size: 50px;
   }
 }
 
