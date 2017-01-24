@@ -239,7 +239,11 @@ footer.page-footer {
 
 /* MODALS
 -------------------------------------------------- */
-
+/*
+.modal {
+  -webkit-overflow-scrolling: auto;
+}
+*/
 #languageModal img {
   width: 40px;
   margin: 10px 10px;
@@ -406,6 +410,14 @@ to get a nicer movement
     opacity: 0;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
+  }
+}
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
   }
 }
 
