@@ -4,7 +4,7 @@ Author: L.Francisco
 Date: 20/01/2017
 Notes: Works for text fields only
 Usage: Make sure input files type is set to "text" to prevent browser field validation
-       Enable field validation by decorating the input field with data-js-validate="email/name/fullname/tel/url/number/date" attribute.
+       Enable field validation by decorating the input field with data-validate="email/name/fullname/tel/url/number/date" attribute.
        Use "collapse" or "invisible" classes to hide the label error message to apper only when invalid 
 */
 
@@ -75,49 +75,79 @@ $(function() {
 
 //--- Form validation -------------------------------------------------------------
 
-  // Hook on forms to validate text fields
-  $("form").each(function(){
+  // Hook on all forms to validate text fields prior to submit
+  $("form").submit( function(eHandler){
 
-      // Replaces the submit event handler
-      $(this).submit(function(e){
+    var rxValidators = {
+    'url'      : /^(ht|f)tps?:\/\/[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/,
+    'email'    : /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i,
+    'fullname' : /^((?![0-9]).+\s.+)/g,
+    'name'     : /^((?![0-9]).+)/g,
+    'tel'      : /^[0-9\-\+]{3,25}$/,
+    'number'   : /^[0-9]+/g,
+    'date'     : /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/,
+    };
 
-          var rxValidators = {
-          'url'      : /^(ht|f)tps?:\/\/[a-z0-9-\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?$/,
-          'email'    : /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i,
-          'fullname' : /^((?![0-9]).+\s.+)/g,
-          'name'     : /^((?![0-9]).+)/g,
-          'tel'      : /^[0-9\-\+]{3,25}$/,
-          'number'   : /^[0-9]+/g,
-          'date'     : /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/,
-          };
+    var invalid = false;
 
-          var invalid = false;
+    // Cleanup previously decorated elements
+    $('.has-error',this).removeClass('has-error has-feedback');
+    $('.collapse',this).hide();
 
-          // Cleanup previously decorated elements
-          $('.has-error',this).removeClass('has-error has-feedback');
-          $('.collapse',this).hide();
+    // Hook on input fields with 'data-validate' attribute
+    $("input[data-validate]", this).each(function(){
 
-          // Hook on input fields with 'data-js-validate' attribute
-          $("input[data-js-validate]", this).each(function(){
+        var input = $(this), rx = rxValidators[input.attr('data-validate').toLowerCase()];
 
-            var input = $(this), rx = rxValidators[input.attr('data-js-validate').toLowerCase()];
-            
-            // Validate input fields matching "validate" attribute with the corresponding regular expression
-            if(!rx.test(input.val()))
+        // Validate input fields matching "validate" attribute with the corresponding regular expression
+        if(!rx.test(input.val()))
+        {
+            // Decorates the relevan form-group with bootstrap invalidity classes
+            input.closest('.form-group').addClass('has-error');// has-feedback');
+
+            // Show the label switching the display status (.collapse)
+            $("label[for='" + input.attr('id') + "']").show();
+
+            invalid = true; // Tracks for field invalidity
+            }
+        });
+
+        // Prevent default behaviour in case of invalid fields
+        if(invalid){
+            eHandler.preventDefault();}
+    });
+
+//--- Initialize WOW.js ------------------------------------------------
+    new WOW().init();
+
+
+//--- Activate animation on scroll -------------------------------------------------------------
+/*
+    var $window = $(window), win_height_padded = $window.height() * 1.1;//,      isTouch           = Modernizr.touch;
+	
+    $window.on('scroll', function(){
+
+        var scrolled = $window.scrollTop();
+
+        $(".aos").each(function(){
+      
+            var $this = $(this), offsetTop = $this.offset().top;
+
+            if(scrolled + win_height_padded > offsetTop)
             {
-                // Decorates the relevan form-group with bootstrap invalidity classes
-                input.closest('.form-group').addClass('has-error');// has-feedback');
+                var animation = $this.attr('data-aos-name');
 
-                // Show the label switching the display status (.collapse)
-                $("label[for='" + input.attr('id') + "']").show();
+                if($this.data('data-aos-timeout'))
+                {
+                    $window.setTimeout(function(){
+                        $this.addClass('animated');// + $this.data('animation'));
+                    }, parseInt($this.data('timeout'),10));
+                } else {
+                    $this.removeClass('aos').addClass('_aos');}// + animation);}
+            }
+        });
+    });
+*/
 
-                invalid = true; // Tracks for field invalidity
-             }
-          });
+});// -- END --
 
-          // Prevent default behaviour in case of invalid fields
-          if(invalid){
-            e.preventDefault();}
-      });
-  });
-});
